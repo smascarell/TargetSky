@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GameOverScene : NSObject
+#import "cocos2d.h"
+#import "CataPum.h"
 
+@interface GameOverLayer : CCLayerColor {
+    CCLabelTTF *_label1;
+    CCLabelTTF *_label2;
+}
+@property (nonatomic, retain) CCLabelTTF *label1;
+@property (nonatomic, retain) CCLabelTTF *label2;
+@end
+
+
+@interface GameOverScene : CCScene {
+    GameOverLayer *_layer;
+}
+@property (nonatomic, retain) GameOverLayer *layer;
 @end
